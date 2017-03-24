@@ -145,7 +145,7 @@ TRACKREC = (102, #Track 1 Record
 # Pad Translations for Drum Rack
 
 PADCHANNEL = 1 # MIDI channel for Drum Rack notes
-DRUM_PADS = (36, 37, 38, 39, 44, 45, 46, 47, 52, 53, 54, 55, 60, 61, 62, 63)
+DRUM_PADS = (36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67)
 
 # Sliders / Knobs
 # ---------------
