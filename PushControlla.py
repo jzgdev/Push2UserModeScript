@@ -154,7 +154,7 @@ class PushControlla(ControlSurface):
             self._device.set_parameter_controls(tuple(device_param_controls))
         self._device.set_on_off_button(self._note_map[DEVICEONOFF])
         self._device.set_bank_nav_buttons(self._note_map[DEVICEBANKNAVLEFT], self._note_map[DEVICEBANKNAVRIGHT])
-        self._device.set_lock_button(self._note_map[DEVICELOCK])
+        self._device.set_lock_button(self._ctrl_map[DEVICELOCK])
         self.set_device_component(self._device)
 
         detail_view_toggler = DetailViewControllerComponent()
