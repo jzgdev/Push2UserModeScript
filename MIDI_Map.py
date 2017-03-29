@@ -12,9 +12,9 @@ SCENE_OFFSET = 0  # Offset from the top of linked session origin (no auto-join)
 # Valid Note/CC assignments are 0 to 127, or -1 for NONE
 # Duplicate assignments are permitted
 
-BUTTONCHANNEL = 0  # Channel assignment for all mapped buttons/pads; valid range is 0 to 15 ; 0=1, 1=2 etc.
-MESSAGETYPE = 0  # Message type for buttons/pads; set to 0 for MIDI Notes, 1 for CCs.
-'''When using CCs for buttons/pads, set BUTTONCHANNEL and SLIDERCHANNEL to different values.'''
+BUTTONCHANNEL = 0 #Channel assignment for all mapped buttons/pads; valid range is 0 to 15 ; 0=1, 1=2 etc.
+MESSAGETYPE = 0 #Message type for buttons/pads; set to 0 for MIDI Notes, 1 for CCs.
+        #When using CCs for buttons/pads, set BUTTONCHANNEL and SLIDERCHANNEL to different values.
 
 # General
 PLAY = 85  # Global play
