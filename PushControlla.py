@@ -16,14 +16,19 @@ from SpecialSessionComponent import SpecialSessionComponent
 from SpecialZoomingComponent import SpecialZoomingComponent
 from SpecialViewControllerComponent import DetailViewControllerComponent
 from MIDI_Map import *
-#MIDI_NOTE_TYPE = 0
-#MIDI_CC_TYPE = 1
+
+'''
+MIDI_NOTE_TYPE = 0
+MIDI_CC_TYPE = 1
 #MIDI_PB_TYPE = 2
+'''
+
 
 class PushControlla(ControlSurface):
     __doc__ = " Script for PushControlla in APC emulation mode "
 
     _active_instances = []
+
     def _combine_active_instances():
         track_offset = 0
         scene_offset = 0
@@ -34,7 +39,7 @@ class PushControlla(ControlSurface):
 
     def __init__(self, c_instance):
         ControlSurface.__init__(self, c_instance)
-        #self.set_suppress_rebuild_requests(True)
+        # self.set_suppress_rebuild_requests(True)
         with self.component_guard():
             self._note_map = []
             self._ctrl_map = []
@@ -47,11 +52,10 @@ class PushControlla(ControlSurface):
             self._session.set_mixer(self._mixer)
             self._setup_device_and_transport_control()
             self.set_highlighting_session_component(self._session)
-            #self.set_suppress_rebuild_requests(False)
+            # self.set_suppress_rebuild_requests(False)
         self._pads = []
         self._load_pad_translations()
         self._do_combine()
-
 
     def disconnect(self):
         self._note_map = None
@@ -64,18 +68,15 @@ class PushControlla(ControlSurface):
         self._mixer = None
         ControlSurface.disconnect(self)
 
-
     def _do_combine(self):
         if self not in PushControlla._active_instances:
             PushControlla._active_instances.append(self)
             PushControlla._combine_active_instances()
 
-
     def _do_uncombine(self):
         if ((self in PushControlla._active_instances) and PushControlla._active_instances.remove(self)):
             self._session.unlink()
             PushControlla._combine_active_instances()
-
 
     def _activate_combination_mode(self, track_offset, scene_offset):
         if TRACK_OFFSET != -1:
@@ -83,7 +84,6 @@ class PushControlla(ControlSurface):
         if SCENE_OFFSET != -1:
             scene_offset = SCENE_OFFSET
         self._session.link_with_track_offset(track_offset, scene_offset)
-
 
     def _setup_session_control(self):
         is_momentary = True
@@ -138,7 +138,6 @@ class PushControlla(ControlSurface):
             strip.set_send_controls((self._ctrl_map[TRACKSENDA[track]], self._ctrl_map[TRACKSENDB[track]], self._ctrl_map[TRACKSENDC[track]]))
             strip.set_invert_mute_feedback(True)
 
-
     def _setup_device_and_transport_control(self):
         is_momentary = True
         self._device = DeviceComponent()
@@ -179,8 +178,7 @@ class PushControlla(ControlSurface):
         transport.set_loop_button(self._note_map[LOOP])
         transport.set_seek_buttons(self._note_map[SEEKFWD], self._note_map[SEEKRWD])
         transport.set_punch_buttons(self._note_map[PUNCHIN], self._note_map[PUNCHOUT])
-        ##transport.set_song_position_control(self._ctrl_map[SONGPOSITION]) #still not implemented as of Live 8.1.6
-
+        # transport.set_song_position_control(self._ctrl_map[SONGPOSITION]) #still not implemented as of Live 8.1.6
 
     def _on_selected_track_changed(self):
         ControlSurface._on_selected_track_changed(self)
@@ -192,7 +190,6 @@ class PushControlla(ControlSurface):
             self.song().view.select_device(device_to_select)
         self._device_component.set_device(device_to_select)
 
-
     def _load_pad_translations(self):
         if -1 not in DRUM_PADS:
             pad = []
@@ -201,7 +198,6 @@ class PushControlla(ControlSurface):
                     pad = (col, row, DRUM_PADS[row*4 + col], PADCHANNEL,)
                     self._pads.append(pad)
             self.set_pad_translations(tuple(self._pads))
-
 
     def _load_MIDI_map(self):
         is_momentary = True
