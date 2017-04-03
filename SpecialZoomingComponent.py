@@ -1,8 +1,9 @@
+# emacs-mode: -*- python-*-
+# -*- coding: utf-8 -*-
+
 import Live
 from _Framework.SessionZoomingComponent import SessionZoomingComponent
 from _Framework.ButtonElement import ButtonElement
-
-
 class SpecialZoomingComponent(SessionZoomingComponent):
     ' Special ZoomingComponent that uses clip stop buttons for stop all when zoomed '
     __module__ = __name__
@@ -10,9 +11,10 @@ class SpecialZoomingComponent(SessionZoomingComponent):
     def __init__(self, session):
         SessionZoomingComponent.__init__(self, session)
 
+
     def _scroll_up(self):
-        # if self._is_zoomed_out:
-        height = self._session.height()
+        #if self._is_zoomed_out:
+        height       = self._session.height()
         track_offset = self._session.track_offset()
         scene_offset = self._session.scene_offset()
 
@@ -25,16 +27,16 @@ class SpecialZoomingComponent(SessionZoomingComponent):
             self._session.set_offsets(track_offset, new_scene_offset)
 
     def _scroll_down(self):
-        # if self._is_zoomed_out:
-            height = self._session.height()
+        #if self._is_zoomed_out:
+            height       = self._session.height()
             track_offset = self._session.track_offset()
             scene_offset = self._session.scene_offset()
             new_scene_offset = scene_offset + height - (scene_offset % height)
             self._session.set_offsets(track_offset, new_scene_offset)
 
     def _scroll_left(self):
-        # if self._is_zoomed_out:
-        width = self._session.width()
+        #if self._is_zoomed_out:
+        width        = self._session.width()
         track_offset = self._session.track_offset()
         scene_offset = self._session.scene_offset()
         if track_offset > 0:
@@ -46,8 +48,8 @@ class SpecialZoomingComponent(SessionZoomingComponent):
             self._session.set_offsets(new_track_offset, scene_offset)
 
     def _scroll_right(self):
-        # if self._is_zoomed_out:
-        width = self._session.width()
+        #if self._is_zoomed_out:
+        width        = self._session.width()
         track_offset = self._session.track_offset()
         scene_offset = self._session.scene_offset()
         new_track_offset = track_offset + width - (track_offset % width)
