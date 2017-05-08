@@ -1,33 +1,12 @@
-Additional:
+Since this script doesn't have modes, I initially set it up to have the bottom four rows of pads act as drum pads, while the top four rows controlled clips, however, if you only want clip control just set DRUM_PADS_ENABLED in MIDI_MAP.py to 0.
 
-To change the size of the track selection box (coloured box in Session view),
-Open “PushControlla.py”
+All of the mappings in MIDI_Map.py work but there are constraints on mappable paremeters, for example, duplicate, quantize, etc. won't work like they do in the standard Push 2 script but they can be remapped to control something else.
 
-Change the values in the brackets () of lines 94, 99, 100, 106 and 107 to suit your needs
+I encourage you to set up your own mapping in MIDI_Map.py to suit your own preferences.
 
-On line 94 the first number is the amount horizontally and second is vertical.
-Lines 99 and 106 are vertical, 100 and 112 are horizontal. 
-Make sure the value you input corresponds with the two values on line 94. 
+Feel free to contribute, make a pull request, and ask questions if you're having any issues. To ask a question, just file it as an issue under this GitHub repo and I'll mark it as such when I see it.
 
-
-This is what the code will look like:
-94        self._session = SpecialSessionComponent(X, Y)
-99        self._scene_launch_buttons = [self._note_map[SCENELAUNCH[index]] for index in range(X) ]
-100       self._track_stop_buttons = [self._note_map[TRACKSTOP[index]] for index in range(Y) ]
-106       for scene_index in range(X):
-112       for track_index in range(Y):
-
-Lastly, don’t forget to add or remove rows/columns for SCENELAUNCH and CLIPNOTEMAP from MIDI_Map.py
-
-
-Downloads:
-BCRManager - 	    http://mountainutilities.eu/bcmanager
-Atom -             https://atom.io
-
-Based off FCB1020 scripts by http://remotescripts.blogspot.com
-
-**st4rchild**
-Special thanks to Youtuber "Lux" for figuring out the scene selection box.
+Based on https://github.com/st4rchild/Ableton-Live-MIDI-Remote-Scripts and FCB1020 scripts by http://remotescripts.blogspot.com
 
 ----------
 DISCLAIMER

@@ -1,8 +1,12 @@
 # Brought to you by st4rchild with the help of Hanz Petrov @ http://remotescripts.blogspot.com
 # Avoid using tabs for indentation, use spaces.
 
+# Control Ring "Red Ring" Dimensions - i.e. how big do you want your control grid in Session View to be?
+CONTROL_RING_HEIGHT = 4
+CONTROL_RING_WIDTH = 8
+
 # Combination Mode offsets
-# ------------------------
+# ------------------------\
 
 TRACK_OFFSET = -1 #offset from the left of linked session origin; set to -1 for auto-joining of multiple instances
 SCENE_OFFSET = 0 #offset from the top of linked session origin (no auto-join)
@@ -85,14 +89,6 @@ SCENELAUNCH = (43, #Scene 1 Launch
 SELCLIPLAUNCH = -1 #Selected clip launch
 STOPALLCLIPS = 29 #Stop all clips
 
-# 8x8 Matrix note assignments
-# Track no.:     1   2   3   4   5   6   7   8
-CLIPNOTEMAP = ((92, 93, 94, 95, 96, 97, 98, 99), #Row 1
-               (84, 85, 86, 87, 88, 89, 90, 91), #Row 2
-               (76, 77, 78, 79, 80, 81, 82, 83), #Row 3
-               (68, 69, 70, 71, 72, 73, 74, 75), #Row 4
-               )
-
 # Track Control
 MASTERSEL = 28 #Master track select
 TRACKSTOP = (-1, #Track 1 Clip Stop
@@ -145,7 +141,32 @@ TRACKREC = (102, #Track 1 Record
 # Pad Translations for Drum Rack
 
 PADCHANNEL = 1 # MIDI channel for Drum Rack notes
-DRUM_PADS = (36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67)
+
+DRUM_PADS_ENABLED = 1
+
+if DRUM_PADS_ENABLED == 1:
+  DRUM_PADS = (36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67)
+else:
+  DRUM_PADS = -1
+
+# 8x8 Matrix note assignments
+# Track no.:     1   2   3   4   5   6   7   8
+if DRUM_PADS_ENABLED == 1:
+  CLIPNOTEMAP = ((92, 93, 94, 95, 96, 97, 98, 99), #Row 1
+                 (84, 85, 86, 87, 88, 89, 90, 91), #Row 2
+                 (76, 77, 78, 79, 80, 81, 82, 83), #Row 3
+                 (68, 69, 70, 71, 72, 73, 74, 75), #Row 4
+                 )
+else:
+  CLIPNOTEMAP = ((92, 93, 94, 95, 96, 97, 98, 99), #Row 1
+                 (84, 85, 86, 87, 88, 89, 90, 91), #Row 2
+                 (76, 77, 78, 79, 80, 81, 82, 83), #Row 3
+                 (68, 69, 70, 71, 72, 73, 74, 75), #Row 4
+                 (67, 66, 65, 64, 63, 62, 61, 60), #Row 5
+                 (59, 58, 57, 56, 55, 54, 53, 52), #Row 6
+                 (51, 50, 49, 48, 47, 46, 45, 44), #Row 7
+                 (43, 42, 41, 40, 39, 38, 37, 36) #Row 8
+                 )
 
 # Sliders / Knobs
 # ---------------

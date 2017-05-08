@@ -1,6 +1,6 @@
 import Live
 import _Framework.Capabilities as caps
-from .PushControlla import PushControlla
+from .Push2UserModeScript import Push2UserModeScript
 
 def get_capabilities():
     return {caps.CONTROLLER_ID_KEY: caps.controller_id(vendor_id=10626, product_ids=[
@@ -13,4 +13,4 @@ def get_capabilities():
 
 def create_instance(c_instance):
 
-    return PushControlla(c_instance)
+    return Push2UserModeScript(c_instance)
