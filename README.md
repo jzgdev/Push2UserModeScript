@@ -24,26 +24,27 @@
 When using Ableton Push 2 for performance, I got a bit frustrated with some of the default behaviors of the built in Push 2 script so I put together this easily customizable script that allowed Push 2 to be controlled the way I wanted it to.
 
 #### More Details on My Setup
-	- Top row of 8 buttons (above display)
-		- Arms corresponding track for recording
-	- Bottom row of buttons (below display)
-		- Selects corresponding track
-	- Top row encoders (knobs)
-		- Controls macro paramaters of selected track/last selected device on track
 
-	- Top 4 x 8 grid
-		- Triggers clips in corresponding slot
-	- Repeat division buttons (right side)
-		- Trigger corresponding scenes
+- Top row of 8 buttons (above display)
+	- Arms corresponding track for recording
+- Bottom row of buttons (below display)
+	- Selects corresponding track
+- Top row encoders (knobs)
+	- Controls macro paramaters of selected track/last selected device on track
 
-	- Bottom grid
-		- Drum pads/standard notes (C1 - G3)
+- Top 4 x 8 grid
+	- Triggers clips in corresponding slot
+- Repeat division buttons (right side)
+	- Trigger corresponding scenes
 
-	- Arrows
-		- Controls location of session contol ring (rectangle visible in Session View)		
+- Bottom grid
+	- Drum pads/standard notes (C1 - G3)
 
-	- Stop Clip
-		- Stops all playing clips
+- Arrows
+	- Controls location of session contol ring (rectangle visible in Session View)		
+
+- Stop Clip
+	- Stops all playing clips
 
 Since this script doesn't have modes, I initially set it up to have the bottom four rows of pads act as drum pads, while the top four rows controlled clips, however, if you only want clip control you change this in `MIDI_Map.py` by setting `DRUM_PADS_ENABLED=0`. I didn't include an option if you wanted ONLY drum pads, easiest way to achieve that is just disabling the script. 				
 
