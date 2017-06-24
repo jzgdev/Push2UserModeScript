@@ -1,4 +1,5 @@
-# Brought to you by st4rchild with the help of Hanz Petrov @ http://remotescripts.blogspot.com
+# Brought to you by jzgDev https://github.com/jzgdev with the help of st4rchild https://github.com/st4rchild Hanz Petrov @ http://remotescripts.blogspot.com
+
 # Avoid using tabs for indentation, use spaces.
 
 # Control Ring "Red Ring" Dimensions - i.e. how big do you want your control grid in Session View to be?
