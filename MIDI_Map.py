@@ -28,7 +28,7 @@ REC = 86 #Global record
 TAPTEMPO = 3 #Tap tempo
 NUDGEUP = -1 #Tempo Nudge Up
 NUDGEDOWN = -1 #Tempo Nudge Down
-UNDO = -1 #Undo
+UNDO = -119 #Undo
 REDO = -1 #Redo
 LOOP = -1 #Loop on/off
 PUNCHIN = -1 #Punch in
@@ -61,18 +61,18 @@ SEEKFWD = -1 #Seek forward
 SEEKRWD = -1 #Seek rewind
 
 # Session Navigation (aka "red box")
-SESSIONLEFT = 44 #Session left
-SESSIONRIGHT = 45#Session right
-SESSIONUP = 46 #Session up
-SESSIONDOWN = 47 #Session down
+SESSIONLEFT = 62 #Session left
+SESSIONRIGHT = 63#Session right
+SESSIONUP = 55 #Session up
+SESSIONDOWN = 54 #Session down
 ZOOMUP = -1 #Session Zoom up
 ZOOMDOWN = -1 #Session Zoom down
 ZOOMLEFT = -1 #Session Zoom left
 ZOOMRIGHT = -1 #Session Zoom right
 
 # Track Navigation
-TRACKLEFT = -1 #Track left
-TRACKRIGHT = -1 #Track right
+TRACKLEFT = 45 #Track left
+TRACKRIGHT = 44 #Track right
 
 # Scene Navigation
 SCENEUP = -1 #Scene down

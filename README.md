@@ -46,6 +46,9 @@ When using Ableton Push 2 for performance, I got a bit frustrated with some of t
 - Stop Clip
 	- Stops all playing clips
 
+- Master
+	- Select master channel
+
 Since this script doesn't have modes, I initially set it up to have the bottom four rows of pads act as drum pads, while the top four rows controlled clips, however, if you only want clip control you change this in `MIDI_Map.py` by setting `DRUM_PADS_ENABLED=0`. I didn't include an option if you wanted ONLY drum pads, easiest way to achieve that is just disabling the script. 				
 
 #### Customizing
@@ -65,7 +68,7 @@ Light that unfortunately don't work as of now:
 	
 	- Drum pads lit up when occupied by a sample (as in default mode)
 	- Light feedback when pressing a drum/note pad
-	- Lights showing available (but not playing) clips
+	- Available (non-playing) clips
 
 #### Encoders
 Past versions of this had worked fine, but somewhere along the way, the encoder's mapping mode stopped functioning properly and typically only makes big jumps from 1-127 as opposed to a smooth transition through the range.	
