@@ -123,7 +123,7 @@ class Push2UserModeScript(ControlSurface):
         self._mixer.master_strip().name = 'Master_Channel_Strip'
         self._mixer.master_strip().set_select_button(self._ctrl_map[MASTERSEL])
         self._mixer.selected_strip().name = 'Selected_Channel_Strip'
-        self._mixer.set_select_buttons(self._ctrl_map[TRACKRIGHT], self._ctrl_map[TRACKLEFT])
+        self._mixer.set_select_buttons(self._ctrl_map[TRACKLEFT], self._ctrl_map[TRACKRIGHT])
         self._mixer.set_crossfader_control(self._ctrl_map[CROSSFADER])
         self._mixer.set_prehear_volume_control(self._ctrl_map[CUELEVEL])
         self._mixer.master_strip().set_volume_control(self._ctrl_map[MASTERVOLUME])
